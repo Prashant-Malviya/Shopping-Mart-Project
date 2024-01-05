@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.row{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
+
+ .activeColor{
+    padding: 5px;
+    /* height: 30px; */
+    /* width: 10%; */
+    border: 2px solid grey;
+    cursor: pointer;
+ }

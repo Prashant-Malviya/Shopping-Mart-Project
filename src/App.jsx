@@ -1,11 +1,23 @@
-import { useState } from 'react'
 import './App.css'
+import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Cart from './Pages/Cart'
+import ShoppingMartAuthenticator from './Authentication/ShoppingMartAuthenticator'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
+      <div className='bg-slate-900'>
+        <Navbar />
+      </div>
+
+      <Routes>
+        <Route path='/' element={<ShoppingMartAuthenticator />}  />
+        <Route path='/home' element={<Home/>}  />
+        <Route path='/cart' element={<Cart/>}  />
+      </Routes>
 
     </div>
   )
