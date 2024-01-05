@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
+import Navbar from "../components/Navbar";
 
 function Cart() {
 
@@ -13,6 +14,10 @@ function Cart() {
     },[cart])
 
   return (
+    <div>
+    <div className='bg-slate-900'>
+        <Navbar />
+      </div>
     <div>
       {cart.length > 0 ? (
         <div className="flex">
@@ -52,6 +57,7 @@ function Cart() {
           </Link>
         </div>
       )}
+    </div>
     </div>
   ); 
 }

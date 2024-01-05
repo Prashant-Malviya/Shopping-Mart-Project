@@ -9,10 +9,7 @@ function App() {
 
   return (
     <div>
-      <div className='bg-slate-900'>
-        <Navbar />
-      </div>
-
+      
       <Routes>
         <Route path='/' element={<ShoppingMartAuthenticator />}  />
         <Route path='/home' element={<Home/>}  />

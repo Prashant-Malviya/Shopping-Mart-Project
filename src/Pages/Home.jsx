@@ -4,6 +4,7 @@ import { FadeLoader } from 'react-spinners';
 import { signOut } from 'firebase/auth';
 import { database } from '../Authentication/firbaseConfig';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 
 function Home() {
@@ -39,6 +40,13 @@ function Home() {
     }
 
   return (
+    <div>
+
+      <div className='bg-slate-900'>
+        <Navbar />
+      </div>
+
+
     <div className='flex flex-col'>
      { loading ? (<FadeLoader color="#36d7b7" className='flex justify-center items-center m-auto'/>) :( posts.length > 0 ? 
      (  
@@ -52,6 +60,7 @@ function Home() {
       </div>))}
       <div className='m-5 p-5'>
     <button className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" onClick={handleClick}>SignOut</button>
+    </div>
     </div>
     </div>
   )
