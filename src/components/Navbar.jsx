@@ -9,9 +9,9 @@ function Navbar() {
   const {cart} = useSelector((state) => state);
 
   return (
-    <div className=''>
+    <div className='fixed bg-slate-900 w-full overflow-hidden'>
       <nav className='flex justify-between items-center h-20 max-w-6xl mx-auto'>
-        <NavLink to='/'>
+        <NavLink to='/home'>
         <div className='ml-5'>
         <p className='font-bold text-lg text-white'>ShoppingMart</p>
         </div>
