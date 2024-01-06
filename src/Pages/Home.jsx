@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 
 
 function Home() {
-    const api_url = "https:fakestoreapi.com/products";
+    const api_url = "https://dummyjson.com/products";
     const [loading,setLoading] = useState(false);
     const [posts,setPosts] = useState([]);
     const history = useNavigate();
@@ -19,8 +19,8 @@ function Home() {
         try {
             const res = await fetch(api_url);
             const data = await res.json();
-            console.log(data)
-            setPosts(data)
+            console.log(data.products)
+            setPosts(data.products)
 
         } catch (error) {
             console.log("Error Occurred!!!!!")

@@ -15,7 +15,7 @@ function CartItem({ item, itemIndex }) {
   return (
     <div className='flex flex-col lg:flex-row'>
       <div className='lg:h-[300px] p-5 m-5'>
-        <img src={item.image} alt='' className='w-full h-full' />
+        <img src={item.images[0]} alt='' className='w-full h-full' />
       </div>
       <div className='p-5 m-5 flex-1'>
         <h1 className='font-bold text-xl'>{item.title}</h1>
